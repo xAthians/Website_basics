@@ -1,1 +1,15 @@
+/*
+Tekijä: AleksiM
+Aika: 22/09/2025
+*/
 
+body {
+    background-color: rgb(0, 0, 0);
+}
+h1 {
+    font: size 32px;
+    color:darkturquoise
+}
+p {
+    color: rgba(64, 231, 243, 0.877);
+}
