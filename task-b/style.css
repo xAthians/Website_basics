@@ -1,1 +1,27 @@
+/* 
+    Tekijä: Aleksi M
+    Aika: 23/09/2025
+*/
+body {
+    background-color: rgba(248, 204, 149, 0.603);
+}
 
+h1 {
+    font-size: 32px;
+    color: Grey;
+    text-decoration: underline;
+}
+
+p {
+    color: rgb(58, 56, 56);
+}
+
+ol li {
+    list-style-type: lower-roman;
+    padding-left: 2rem;
+}
+
+ul li {
+    list-style-type: square;
+    padding-left: 2rem;
+}
