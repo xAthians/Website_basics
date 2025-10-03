@@ -1,0 +1,41 @@
+/*
+Tekijä Aleksi M
+Aika 2/10/2025 
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #5c5c5c;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #141414;
+}
+
+.media-box {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+audio,
+video {
+  display: block;
+  margin: 0 auto;
+  max-width: 500;
+}
