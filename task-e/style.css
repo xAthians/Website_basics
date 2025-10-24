@@ -20,9 +20,9 @@ Aika: 23/10/2025
   /* Colors */
   --page-bg: #f6f8fb;
   --text: #1f2937;
-  --brand: #273e73;
-  --table-alt: #eef3ff;
-  --border: #d0d7e2;
+  --brand: #1b1e20;
+  --table-alt: #dddddd;
+  --border: #747577;
 
   /* Radius in px */
   --radius: 8px;
@@ -127,5 +127,22 @@ body {
 /* Center the day columns (Monâ€“Thu) */
 .table thead th:nth-child(n+2),
 .table tbody td:nth-child(n+2) {
+  padding-right: 1rem;
   text-align: center;
+}
+/* ≤ 768px: margins 5%, show only student-info + table */
+@media (max-width: 768px) {
+  .content { margin-left: 5%; margin-right: 5%; }
+  .site-header h1 { display: none }
+  .site-header { display: none }
+  .intro,
+  .other-content { display: none; }
+  .student-info,
+  .table-wrap { display: block; }
+}
+
+/* ≤ 640px: margins 1%, show only the table */
+@media (max-width: 640px) {
+  .content { margin-left: 1%; margin-right: 1%; }
+  .student-info { display: none; }
 }
