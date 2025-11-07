@@ -45,11 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let valid = true;
 
     // Validate name
-    if (!validateName(fullName)) {
+    const nameParts = fullName.split(" ").filter(Boolean);
+    if (nameParts.length < 2 || nameParts.some(part => part.length < 2)) {
       document.getElementById("nameError").textContent =
-        "Full name must be at least 3 characters.";
+        "Please enter your full name (first and last), each at least 2 letters.";
       valid = false;
     }
+
 
     // Validate email
     if (!validateEmail(email)) {
@@ -65,17 +67,38 @@ document.addEventListener("DOMContentLoaded", () => {
       valid = false;
     }
 
-    // Validate date
+    // Validate birth date (must be at least 13 years old)
     if (!birthDate) {
       document.getElementById("dateError").textContent =
         "Please select your birth date.";
       valid = false;
+    } else {
+      const today = new Date();
+      const birth = new Date(birthDate);
+      if (birth > today) {
+        document.getElementById("dateError").textContent =
+          "Birth date cannot be in the future.";
+        valid = false;
+      } else {
+        const age = today.getFullYear() - birth.getFullYear();
+        const monthDiff = today.getMonth() - birth.getMonth();
+        const actualAge =
+          monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())
+            ? age - 1
+            : age;
+        if (actualAge < 13) {
+          document.getElementById("dateError").textContent =
+            "You must be at least 13 years old to register.";
+          valid = false;
+        }
+      }
     }
+
 
     // Validate terms checkbox
     if (!termsAccepted) {
       document.getElementById("termsError").textContent =
-        "You must accept the terms and conditions.";
+        "You must accept the terms!";
       valid = false;
     }
 
