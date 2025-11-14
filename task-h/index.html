@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="index.js"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <!--
+    Author: Aleksi Maunumäki
+    Date: 13/11/2025
+  -->
+
+  <header class="bg-gray-600 text-white py-6 shadow-md">
+    <h1 class="text-3xl font-bold text-center">Registration Page</h1>
+  </header>
+
+  <main class="p-6 max-w-7xl mx-auto">
+    <!-- Top row split into two blocks -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      <!-- Student info (30%) -->
+      <section class="bg-white p-6 rounded shadow-md md:col-span-1" aria-label="Student information">
+        <h2 class="text-xl font-semibold mb-4">Information</h2>
+        <p class="mb-2"><span class="font-medium">Aleksi Maunumäki</span></p>
+        <p><span class="font-medium">NTIS24K</span></p>
+      </section>
+
+      <!-- Controls (70%) -->
+      <section class="bg-white p-6 rounded shadow-md md:col-span-2" aria-label="Registration form">
+        <h2 class="text-xl font-semibold mb-4">Register New Entry</h2>
+
+        <form id="registrationForm" novalidate class="space-y-4">
+          <input type="hidden" id="timestamp" name="timestamp" />
+
+          <div>
+            <label for="fullName" class="block font-medium">Full Name</label>
+            <input id="fullName" name="fullName" type="text" required placeholder="e.g., Mary Martin"
+              class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <span class="text-red-500 text-sm" id="nameError"></span>
+          </div>
+
+          <div>
+            <label for="email" class="block font-medium">Email</label>
+            <input id="email" name="email" type="email" required placeholder="e.g., mary@example.com"
+              class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <span class="text-red-500 text-sm" id="emailError"></span>
+          </div>
+
+          <div>
+            <label for="phone" class="block font-medium">Phone Number</label>
+            <input id="phone" name="phone" type="tel" required placeholder="e.g. +1234567890"
+              class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <span class="text-red-500 text-sm" id="phoneError"></span>
+          </div>
+
+          <div>
+            <label for="birthDate" class="block font-medium">Birth Date</label>
+            <input id="birthDate" name="birthDate" type="date" required
+              class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <span class="text-red-500 text-sm" id="dateError"></span>
+          </div>
+
+          <div class="flex items-center space-x-2">
+            <input type="checkbox" id="terms" name="terms" required class="h-4 w-4 text-blue-600" />
+            <label for="terms" class="text-sm">I accept the terms and conditions</label>
+            <span class="text-red-500 text-sm" id="termsError"></span>
+          </div>
+
+          <div class="flex space-x-4">
+            <button id="submitBtn" type="submit"
+              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit</button>
+            <button id="clearBtn" type="reset"
+              class="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400">Clear</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto bg-white rounded shadow-md">
+      <table id="timetable" class="min-w-full table-auto border-collapse">
+        <thead class="bg-gray-400">
+          <tr>
+            <th class="px-4 py-2 text-left">Timestamp</th>
+            <th class="px-4 py-2 text-left">Full Name</th>
+            <th class="px-4 py-2 text-left">Email</th>
+            <th class="px-4 py-2 text-left">Phone</th>
+            <th class="px-4 py-2 text-left">Birth Date</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <!-- Dynamic rows go here -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+
+</html>
