@@ -410,3 +410,13 @@ main.container {
   font-weight: bold; 
   margin: 0.5rem 0;
 }
+
+.container h3 {
+    text-align:center;
+    font-weight:bold;
+    font-size:2.0rem;
+}
+
+.container p {
+    font-weight:bold;
+}
