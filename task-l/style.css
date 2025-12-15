@@ -198,6 +198,11 @@ footer a:hover {
   article {
     max-width: 90%;
   }
+
+  header {
+    font-size:1.5rem;
+    padding:0.5rem;
+  }
 }
 
 @media (max-width: 480px) {
