@@ -1,0 +1,108 @@
+<!--
+Author: Aleksi M
+Date: 09/12/2025
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LensHire Order</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h2>LensHire Camera Rentals</h2>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="catalog.html">Catalog</a> |
+      <a href="order.html">Order</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section>
+      <h2>Place Your Rental Order</h2>
+      <p>Complete the form below to request a rental. Choose your item, rental period, and provide your contact details. We’ll confirm your order by email.</p>
+    </section>
+
+    <section>
+      <h3>Ordering form</h3>
+      <form action="thanks.html" method="post" class="order-form">
+        
+        <!-- Customer Information -->
+        <fieldset>
+          <legend>Customer Information</legend>
+          
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required>
+          
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </fieldset>
+
+        <!-- Rental Details -->
+        <fieldset>
+          <legend>Rental Details</legend>
+          
+          <label for="item">Item to Rent</label>
+          <select id="item" name="item" required>
+            <option value="">-- Select an item --</option>
+            <option value="canon-r5">Canon EOS R5</option>
+            <option value="rf-24-70">Canon RF 24-70mm f/2.8</option>
+            <option value="tripod">Manfrotto Tripod</option>
+          </select>
+          
+          <label for="start">Start Date</label>
+          <input type="date" id="start" name="start" required>
+          
+          <label for="end">End Date</label>
+          <input type="date" id="end" name="end" required>
+          
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+        </fieldset>
+
+        <!-- Additional Info & Consent -->
+        <fieldset>
+          <legend>Additional Information</legend>
+          
+          <label for="message">Special Requests</label>
+          <textarea id="message" name="message" rows="4" placeholder="Any special wishes or possible additional rental items..."></textarea>
+          
+          <label>
+            <input type="checkbox" name="terms" required>
+            I accept the rental terms and privacy policy
+          </label>
+          
+          <label>
+            <input type="checkbox" name="newsletter">
+            Subscribe to newsletter
+          </label>
+        </fieldset>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-primary">Submit Rental Request</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact us: info@lenshire.com | +1 (555) 123-4567</p>
+    <div>
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Twitter</a>
+    </div>
+    <p>&copy; 2025 LensHire Camera Rentals</p>
+  </footer>
+</body>
+</html>

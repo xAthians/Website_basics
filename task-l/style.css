@@ -1,0 +1,422 @@
+/* 
+Author: Aleksi M
+Date: 09/12/2025
+*/
+
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fdfdfd;
+}
+
+/* Header */
+header {
+  background: #064d1d;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 40px;
+  font-style: italic;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;      
+  text-align: center;
+  color: #fff;
+}
+
+.hero img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;          
+}
+
+
+.hero-text {
+  position: absolute;     
+  top: 50%;                 
+  left: 50%;                
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  max-width: 80%;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* Main Content */
+main {
+  padding: 2rem;
+}
+
+/* About Section */
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+/* Product Highlights */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+article {
+  flex: 1 1 300px;
+  max-width: 320px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fafafa;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+article:hover {
+  transform: translateY(-5px);
+}
+
+figure img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+/* Features/Benefits */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+ul li {
+  background: #eef6fb;
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+
+/* Call-to-Action */
+.cta {
+  text-align: center;
+  background: #064d1d;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cta a:hover {
+  background: #e6e6e6;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  article {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta {
+    padding: 1.5rem;
+  }
+}
+
+/* Catalog Product Grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.products article {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.products article:hover {
+  transform: translateY(-5px);
+}
+
+.products figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Video Section */
+video {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Navigation inside header */
+header nav {
+  margin-top: 0.5rem;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* How to Rent section with background */
+.how-to-rent {
+  background-image: url("Assets/example.jpg");
+  background-size: cover;       /* Fill the section */
+  background-position: center;  /* Center the image */
+  padding: 2rem;
+  border-radius: 8px;
+  color: #fff;                  /* Ensure text is readable */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.how-to-rent h2 {
+  margin-bottom: 1rem;
+}
+
+.how-to-rent video {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Main container spacing */
+main.container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Order form wrapper */
+.order-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Fieldsets */
+.order-form fieldset {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.order-form legend {
+  font-weight: bold;
+  color: #064d1d;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Labels */
+.order-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Inputs, selects, textareas */
+.order-form input,
+.order-form select,
+.order-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+  border-color: #064d1d;
+  box-shadow: 0 0 6px rgba(6, 77, 29, 0.3);
+  outline: none;
+}
+
+/* Checkboxes inline with text */
+.order-form input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.order-form label input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+/* Submit button */
+.order-form button,
+.btn-primary {
+  display: inline-block;
+  background: #064d1d;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.order-form button:hover,
+.btn-primary:hover {
+  background: #046b29;
+}
+
+/* Thank You Page Styles */
+.container_thanks {
+  display: flex;                
+  justify-content: center;       
+  align-items: center;           
+  min-height: calc(100vh - 160px); 
+  text-align: center;
+  padding: 2rem;
+}
+
+.container_thanks section {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.container_thanks h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #064d1d;   
+  margin-bottom: 1rem;
+}
+
+.container_thanks p {
+  font-size: 1.2rem;
+  font-weight: bold; 
+  margin: 0.5rem 0;
+}
+
+.container h3 {
+    text-align:center;
+    font-weight:bold;
+    font-size:2.0rem;
+}
+
+.container p {
+    font-weight:bold;
+}
