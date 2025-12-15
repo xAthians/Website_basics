@@ -23,8 +23,11 @@ header {
   color: #fff;
   text-align: center;
   padding: 1rem;
-  font-size: 40px;
-  font-style: italic;
+}
+
+header h1 {
+    font-style:italic;
+    font-size:40px;
 }
 
 /* Hero Section */
@@ -53,7 +56,7 @@ header {
   max-width: 80%;
 }
 
-.hero-text h1 {
+.hero-text h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -63,7 +66,7 @@ header {
 }
 
 
-.hero h1 {
+.hero h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -80,12 +83,26 @@ main {
 
 /* About Section */
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem;         
 }
 
-section h2 {
+.paragraph { 
+  background-color: #fff;             
+  padding:1rem;
+  border-radius: 12px;                
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
+  max-width: 600px;                     
+  margin: 20px auto;                   
+  font-weight:bold;
+}    
+
+.paragraph h2 {
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: #333;
+}
+
+.hero h2 {
+    color:#ffffff;
 }
 
 /* Product Highlights */
@@ -186,7 +203,7 @@ footer a:hover {
     padding: 4rem 1rem;
   }
 
-  .hero h1 {
+  .hero h2 {
     font-size: 2rem;
   }
 
@@ -206,7 +223,7 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-  .hero h1 {
+  .hero h2 {
     font-size: 1.8rem;
   }
 
